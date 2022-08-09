@@ -19,10 +19,10 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false, unique = true)
-    private String nome;
+    @Column(unique = true)
+    private String name;
 
-    @Column(nullable = false)
+    @Column
     private Integer age;
 
 }

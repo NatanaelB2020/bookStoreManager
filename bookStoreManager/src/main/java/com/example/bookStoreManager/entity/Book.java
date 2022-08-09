@@ -18,19 +18,19 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
     private String name;
 
-    @Column(nullable = false)
+    @Column
     private Integer pages;
 
-    @Column(nullable = false)
+    @Column
     private Integer chapters;
 
-    @Column(nullable = false)
+    @Column
     private  String isbn;
 
-    @Column(name = "publisherName", nullable = false, unique = true)
+    @Column(name = "publisherName", unique = true)
     private String publisherName;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
